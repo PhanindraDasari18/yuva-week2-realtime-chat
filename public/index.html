@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Real-Time Chat | Yuva Intern Week 2</title><link rel="stylesheet" href="/styles.css">
+</head>
+<body><main class="app">
+<header><div><p class="eyebrow">YUVA INTERN · WEEK 2</p><h1>Real-Time Chat</h1><p class="subtitle">A shared chat room powered by Socket.IO</p></div><div class="online"><span class="dot"></span><span id="online-count">0</span> online</div></header>
+<section id="join-panel" class="join-panel"><label for="username">Choose a display name</label><form id="join-form"><input id="username" maxlength="24" placeholder="e.g. Alex" autocomplete="nickname" required><button>Join chat</button></form><p id="join-error" class="error" role="alert"></p></section>
+<section id="chat-panel" class="chat-layout" hidden>
+<aside><h2>Active users <span id="user-count">0</span></h2><ul id="users-list"></ul></aside>
+<section class="conversation"><div id="messages" class="messages" aria-live="polite"><p class="empty-state">Messages will appear here. Say hello!</p></div>
+<form id="message-form"><input id="message-input" maxlength="500" placeholder="Write a message..." autocomplete="off" required><button>Send</button></form><p id="connection-status" class="status">Connecting…</p></section></section>
+<footer>Learning project · Messages are broadcast to everyone in this room.</footer></main>
+<script src="/socket.io/socket.io.js"></script><script src="/client.js"></script></body></html>
